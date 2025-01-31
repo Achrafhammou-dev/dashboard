@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BK Management Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #d62300, #ffcc00);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Container */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            font-size: 28px;
+            font-weight: bold;
+            color: #d62300;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation: fadeInDown 1s ease;
+        }
+
+        /* Dashboard Grid */
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        /* Card Design */
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            color: #333;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            text-decoration: none;
+            animation: fadeInUp 1s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+            background: rgba(255, 255, 255, 1);
+        }
+
+        .card i {
+            font-size: 60px;
+            margin-bottom: 20px;
+            color: #d62300;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover i {
+            transform: rotate(15deg);
+        }
+
+        .card h3 {
+            font-size: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #333;
+            margin: 0;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar {
+                font-size: 24px;
+                padding: 15px;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            .card i {
+                font-size: 50px;
+            }
+
+            .card h3 {
+                font-size: 18px;
+            }
+
+            .card p {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar {
+                font-size: 20px;
+                padding: 10px;
+            }
+
+            .dashboard {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                padding: 15px;
+            }
+
+            .card i {
+                font-size: 40px;
+            }
+
+            .card h3 {
+                font-size: 16px;
+            }
+
+            .card p {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Navbar -->
+        <div class="navbar">Burger King Management Dashboard</div>
+
+        <!-- Dashboard Grid -->
+        <div class="dashboard">
+            <a href="http://41.248.247.222/purchase_order" class="card">
+                <i class="fas fa-file-invoice-dollar"></i>
+                <h3>Purchase Order</h3>
+                <p>Manage and track all purchase orders efficiently.</p>
+            </a>
+            <a href="http://41.248.247.222/inventory-management-system/index.php" class="card">
+                <i class="fas fa-boxes"></i>
+                <h3>Stock Management</h3>
+                <p>Monitor and control inventory levels with ease.</p>
+            </a>
+            <a href="http://41.248.247.222/ExpenseTracker" class="card">
+                <i class="fas fa-receipt"></i>
+                <h3>Expenses Tracker</h3>
+                <p>Keep track of all expenses and financial transactions.</p>
+            </a>
+            <a href="complain_management_url" class="card">
+                <i class="fas fa-comments"></i>
+                <h3>Complaint Management</h3>
+                <p>Handle customer complaints and feedback effectively.</p>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
